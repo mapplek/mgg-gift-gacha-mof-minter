@@ -1,0 +1,112 @@
+.container_mint {
+    margin: auto;
+    max-width: 500px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffeaff;
+    background-image: linear-gradient(0deg, #ffeaff 0%, #ffb1d1 100%);
+}
+
+.block_price {
+    margin: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.block_counter {
+    width: 90%;
+    margin: 10px auto;
+    justify-content: center;
+    display: flex;
+    border: 3px solid rgb(84, 2, 116);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.counter {
+    width: 40px;
+    height: 36px;
+    margin: 5px;
+    background: #ffffff;
+    border: 2px solid rgb(84, 2, 116);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+.countup {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: #0e2171;
+    background-image: linear-gradient(335deg, #0e2171 0%, #256c96 46%, #00a85a 100%);
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+}
+
+.countdown {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: #0e0f89;
+    background-image: linear-gradient(335deg, #0e0f89 0%, #8e2aac 46%, #c89ff9 100%);
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+}
+
+.block_operate_mint {
+    margin: 10px;
+}
+
+.button_mint {
+    margin: 0 30px;
+    height: 40px;
+    width: 100px;
+    font-size: 14px;
+    color: #1c043d;
+    background-color: #FBDA61;
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: gray;
+}
+
+.loading {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notice_success {
+    min-width: 250px;
+    color: rgb(0, 100, 0);
+    border-radius: 5px;
+    background-color: #ade6bd;
+    padding: 5px;
+    line-height: 16px;
+}
+
+.notice_failure {
+    min-width: 250px;
+    color: rgb(136, 0, 0);
+    border-radius: 5px;
+    background-color: rgba(255, 202, 202, 1);
+    padding: 5px;
+    line-height: 16px;
+}
+
+.spacer {
+    height: 30px;
+}

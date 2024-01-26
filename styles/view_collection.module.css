@@ -1,0 +1,53 @@
+.container_view_collection {
+    max-width: 500px;
+    min-width: 320px;
+    margin: auto;
+}
+
+.container_img {
+    height: 310px;
+}
+
+.collection_name {
+    margin: 10px 0 0 0;
+}
+
+.collection_name h2 {
+    text-align: center;
+}
+
+.block_chain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 10px 0;
+}
+
+.block_view_img {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_frame {
+    border-radius: 20px;
+    width: 285px;
+    height: 285px;
+    border: 5px solid rgb(84, 2, 116);
+    background-color: #f5eeff;
+    background-image: linear-gradient(180deg, #f5eeff 0%, #f6b3ff 100%);
+
+}
+
+.img_area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 2px 0 0 0;
+}
+
+.img_property {
+    border-radius: 15px;
+}
