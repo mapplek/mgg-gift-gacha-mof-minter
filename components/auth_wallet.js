@@ -44,16 +44,16 @@ export default function AuthWallet() {
                     </div>
                 }
 
-                {isConnected && (chain.id != process.env.NEXT_PUBLIC_TESTNET_CHAIN_ID) &&
+                {isConnected && (chain.id != process.env.NEXT_PUBLIC_MAINNET_CHAIN_ID) &&
                     <div className={styles.block_wallet}>
                         <div>
                             <button
-                                key={process.env.NEXT_PUBLIC_TESTNET_CHAIN_ID}
-                                onClick={() => switchNetwork?.(process.env.NEXT_PUBLIC_TESTNET_CHAIN_ID)}
+                                key={process.env.NEXT_PUBLIC_MAINNET_CHAIN_ID}
+                                onClick={() => switchNetwork?.(process.env.NEXT_PUBLIC_MAINNET_CHAIN_ID)}
                                 className={styles.wallet_button}
                             >
                                 ネットワーク変更
-                                {isLoading && pendingChainId === process.env.NEXT_PUBLIC_TESTNET_CHAIN_ID &&
+                                {isLoading && pendingChainId === process.env.NEXT_PUBLIC_MAINNET_CHAIN_ID &&
                                     ' (切替中...)'
                                 }
                             </button>
@@ -61,7 +61,7 @@ export default function AuthWallet() {
                     </div>
                 }
 
-                {isConnected && (chain.id == process.env.NEXT_PUBLIC_TESTNET_CHAIN_ID) &&
+                {isConnected && (chain.id == process.env.NEXT_PUBLIC_MAINNET_CHAIN_ID) &&
                     <div className={styles.block_wallet}>
                         <div>
                             <button

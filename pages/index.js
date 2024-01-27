@@ -1,5 +1,5 @@
 import { alchemyProvider } from 'wagmi/providers/alchemy'
-import { polygonMumbai } from 'wagmi/chains'
+import { polygon } from 'wagmi/chains'
 import { infuraProvider } from 'wagmi/providers/infura'
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
 import { WagmiConfig, createConfig, configureChains } from 'wagmi'
@@ -8,15 +8,15 @@ import Head from 'next/head'
 
 
 const { publicClient } = configureChains(
-    [polygonMumbai],
+    [polygon],
     [
-        alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_TESTNET_ALCHEMY_API_KEY }),
-        infuraProvider({ apiKey: process.env.NEXT_PUBLIC_TESTNET_INFURA_API_KEY }),
+        alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_MAINNET_ALCHEMY_API_KEY }),
+        infuraProvider({ apiKey: process.env.NEXT_PUBLIC_MAINNET_INFURA_API_KEY }),
     ],
 )
 
 const connector = new MetaMaskConnector({
-    chains: [polygonMumbai]
+    chains: [polygon]
 })
 
 const config = createConfig({
@@ -29,7 +29,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Machinegun Girl&apos;s Pass FUN</title>
+                <title>Machinegun Girl&apos;s Gift Gacha [MOF]</title>
                 <link rel="icon" href="/favicon.ico" sizes="32x32" />
             </Head>
             

@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 
 export default function ContainerMint() {
     const [mintAmount, setMintAmount] = useState(1)
-    const [mintCost, setMintCost] = useState(0.001)
+    const [mintCost, setMintCost] = useState(1)
 
     const changeMintAmountHandler = (count) => {
         if (mintAmount + count < 1) setMintAmount(1);
@@ -16,7 +16,7 @@ export default function ContainerMint() {
     }
 
     const { config } = usePrepareContractWrite({
-        address: process.env.NEXT_PUBLIC_TESTNET_CONTRACT_ADDRESS,
+        address: process.env.NEXT_PUBLIC_MAINNET_CONTRACT_ADDRESS,
         abi: abi,
         functionName: 'mint',
         value: parseEther(`${mintCost}`),
@@ -29,10 +29,7 @@ export default function ContainerMint() {
     });
 
     useEffect(() => {
-        setMintCost(0.001 * mintAmount);
-
-        console.log(`mintCost: ${mintCost}`);
-        console.log(`mintAmount: ${mintAmount}`);
+        setMintCost(1 * mintAmount);
     }, [mintAmount]);
 
     return (
@@ -71,7 +68,7 @@ export default function ContainerMint() {
                 {mintData && !isLoading && !isError && isSuccess &&
                     <div className={styles.notice_success}>
                         <p>ミントに成功しました！</p>
-                        <p><a href='https://testnets.opensea.io/ja/account'>マイコレクションを確認する</a></p>
+                        <p><a href='https://opensea.io/ja/account'>マイコレクションを確認する</a></p>
                     </div>
                 }
                 {isError &&
